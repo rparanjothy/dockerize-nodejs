@@ -1,0 +1,13 @@
+#  here we are creating 2 container- one for prod and 1 for beta 
+version: "3"
+services: 
+  api: 
+    build: .
+    ports:
+    - 5001:5000
+    container_name: ducati-node-container-prod
+  api-beta: 
+    build: .
+    ports:
+    - 5002:5000
+    container_name: ducati-node-container-beta
